@@ -10,7 +10,7 @@ export default function CoursesPageClient() {
   const role = useSessionStore((s) => s.role);
 
   return (
-    <div className="pt-4">
+    <div className="pt-4 overflow-hidden">
       <h1 className="px-5 text-sm font-semibold text-neutral-900">내 수강정보</h1>
 
       {/* 비수강생 */}
