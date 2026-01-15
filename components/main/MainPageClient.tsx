@@ -8,7 +8,7 @@ import PromoBannerSection from "./sections/SeminarSection";
 
 export default function MainPageClient() {
   return (
-    <div className="mx-auto min-h-dvh max-w-[420px] pb-24" style={{backgroundColor:"#8f8f8f"}}>
+    <div className="mx-auto min-h-dvh max-w-[420px] pb-24" style={{backgroundColor:"#8f8f8f",overflow:"hidden"}}>
       <div className="px-5 pt-6">
         <MainTopSection />
       </div>

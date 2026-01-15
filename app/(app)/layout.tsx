@@ -20,18 +20,22 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
   }, [hydrated, role, router]);
 
   return (
-  <div className="mx-auto h-dvh max-w-[420px] bg-white relative overflow-hidden">
-    <AppHeader onOpenMenu={() => setMenuOpen(true)} />
+  <div className="mx-auto h-dvh max-w-[420px] bg-white flex flex-col overflow-hidden">
+  <header className="h-14 shrink-0">
+    <AppHeader onOpenMenu={function (): void {
+          throw new Error("Function not implemented.");
+        } } />
+  </header>
 
-    {/* ✅ main만 스크롤 */}
-    <main className="h-full overflow-y-auto pb-35">
-      {children}
-    </main>
+  <main className="flex-1 overflow-y-auto pb-17">
+    {children}
+  </main>
 
+  <nav className="h-16 shrink-0">
     <BottomTabBar />
+  </nav>
+</div>
 
-    <MenuDrawer open={menuOpen} onClose={() => setMenuOpen(false)} />
-  </div>
 );
 
 
