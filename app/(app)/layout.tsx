@@ -22,9 +22,8 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
   <div className="mx-auto h-dvh max-w-[420px] bg-white flex flex-col overflow-hidden">
   <header className="h-14 shrink-0">
-    <AppHeader onOpenMenu={function (): void {
-          throw new Error("Function not implemented.");
-        } } />
+    <AppHeader onOpenMenu={() => setMenuOpen(true)} />
+    <MenuDrawer open={menuOpen} onClose={() => setMenuOpen(false)} />
   </header>
 
   <main className="flex-1 overflow-y-auto pb-17">
