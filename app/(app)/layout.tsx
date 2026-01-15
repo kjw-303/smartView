@@ -20,25 +20,27 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
   }, [hydrated, role, router]);
 
   return (
-  <div className="mx-auto h-dvh max-w-[420px] bg-white flex flex-col overflow-hidden">
-  <header className="h-14 shrink-0">
-    <AppHeader onOpenMenu={() => setMenuOpen(true)} />
-    <MenuDrawer open={menuOpen} onClose={() => setMenuOpen(false)} />
-  </header>
+    <div className="mx-auto h-dvh max-w-[420px] bg-white flex flex-col overflow-hidden relative">
+      {/* header */}
+      <header className="h-14 shrink-0">
+        <AppHeader onOpenMenu={() => setMenuOpen(true)} />
+      </header>
 
-  <main className="flex-1 overflow-y-auto pb-17">
-    {children}
-  </main>
+      {/* main */}
+      <main className={["flex-1 overflow-y-auto", menuOpen ? "pointer-events-none" : "", "pb-8"].join(" ")}>
+        {children}
+      </main>
 
-  <nav className="h-16 shrink-0">
-    <BottomTabBar />
-  </nav>
-  <div id="overlay-root" className="absolute inset-0 pointer-events-none" />
+      {/* bottom nav */}
+      <nav className="h-16 shrink-0">
+        <BottomTabBar />
+      </nav>
 
-</div>
+      {/* drawer: header 밖에서 렌더 */}
+      <MenuDrawer open={menuOpen} onClose={() => setMenuOpen(false)} />
 
-);
-
-
-
+      {/* portal root */}
+      <div id="overlay-root" className="absolute inset-0 pointer-events-none" />
+    </div>
+  );
 }
