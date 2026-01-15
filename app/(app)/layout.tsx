@@ -24,7 +24,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     <AppHeader onOpenMenu={() => setMenuOpen(true)} />
 
     {/* ✅ main만 스크롤 */}
-    <main className="h-full overflow-y-auto pb-24">
+    <main className="h-full overflow-y-auto pb-35">
       {children}
     </main>
 
