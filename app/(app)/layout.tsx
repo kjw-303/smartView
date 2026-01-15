@@ -34,6 +34,8 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
   <nav className="h-16 shrink-0">
     <BottomTabBar />
   </nav>
+  <div id="overlay-root" className="absolute inset-0 pointer-events-none" />
+
 </div>
 
 );
