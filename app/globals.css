@@ -26,3 +26,4 @@ body {
 }
 
 .pb-17 {padding-bottom: calc(var(--spacing) * 17);}
+select,input,textarea {color:#111!important;}
