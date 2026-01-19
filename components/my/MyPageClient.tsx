@@ -44,14 +44,14 @@ export default function MyPageClient() {
         <MyMenuSection
           title="커뮤니티"
           items={[
-            { label: "내가 쓴 글", onClick: () => alert("TODO") },
+            { label: "내가 쓴 글", onClick: () => router.push("/my/posts") },
           ]}
         />
 
         <MyMenuSection
           title="설정"
           items={[
-            { label: "앱 설정", onClick: () => alert("TODO") },
+            { label: "앱 설정", onClick: () => router.push("/my/settings") },
             { label: "약관 및 정보처리방침", onClick: () => alert("TODO") },
           ]}
         />
