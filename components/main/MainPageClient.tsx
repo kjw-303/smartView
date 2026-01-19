@@ -9,7 +9,7 @@ import PromoBannerSection from "./sections/SeminarSection";
 export default function MainPageClient() {
   return (
     <div className="mx-auto min-h-dvh max-w-[420px]" style={{overflow:"hidden"}}>
-      <div className="px-5 pt-6">
+      <div className="pt-6">
         <MainTopSection />
       </div>
 

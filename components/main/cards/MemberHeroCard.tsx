@@ -2,7 +2,13 @@
 
 import Card from "../ui/Card";
 
-export default function MemberHeroCard({ userName }: { userName: string }) {
+export default function MemberHeroCard({
+  userName,
+  onClickViewEnrollments,
+}: {
+  userName: string;
+  onClickViewEnrollments: () => void;
+}) {
   return (
     <Card>
       <div className="p-5">
@@ -14,6 +20,7 @@ export default function MemberHeroCard({ userName }: { userName: string }) {
 
         <button
           type="button"
+          onClick={onClickViewEnrollments}
           className="mt-4 w-full rounded-xl bg-[#1E2348] py-3 text-sm font-semibold text-white"
         >
           수강신청 보러가기
