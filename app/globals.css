@@ -26,4 +26,5 @@ body {
 }
 
 .pb-17 {padding-bottom: calc(var(--spacing) * 17);}
-select,input,textarea {color:#111!important;}
+select,input,textarea {color:#aaaaaa;}
+.min-h-\[50dvh\] {min-height: 50dvh;}

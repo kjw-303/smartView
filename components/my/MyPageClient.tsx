@@ -22,8 +22,8 @@ export default function MyPageClient() {
         <MyMenuSection
           title="계정"
           items={[
-            { label: "비밀번호 변경", onClick: () => alert("TODO") },
-            { label: "관심사 관리", onClick: () => alert("TODO") },
+            { label: "비밀번호 변경", onClick: () => router.push("/my/password-change") },
+            { label: "관심사 관리", onClick: () => router.push("/my/interests") },
             { label: "내 원서 전체보기", onClick: () => alert("TODO") },
           ]}
         />

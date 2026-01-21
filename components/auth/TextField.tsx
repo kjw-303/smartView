@@ -17,7 +17,7 @@ export default function TextField({
 
   return (
     <div className="space-y-1">
-      <label className="text-xs text-neutral-700">{label}</label>
+      <label className="text-xs text-neutral-200">{label}</label>
       <input
         className={[
           "w-full rounded-lg border px-3 py-3 text-sm outline-none",

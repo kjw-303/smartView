@@ -5,6 +5,7 @@ import CommunityTabs, { CommunityTabKey } from "./CommunityTabs";
 import PopularSlider from "./PopularSlider";
 import PostList, { PostItem } from "./PostList";
 import FilterSheet, { FilterState } from "./FilterSheet";
+import WriteFab from "./WriteFab";
 
 const ALL_POSTS: PostItem[] = [
   {
@@ -138,6 +139,7 @@ export default function CommunityPageClient() {
           setFilterOpen(false);
         }}
       />
+      <WriteFab />
     </div>
   );
 }

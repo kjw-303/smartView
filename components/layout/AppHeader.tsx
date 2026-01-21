@@ -8,8 +8,9 @@ function getTitle(pathname: string) {
   if (pathname.startsWith("/notifications")) return "알림";
   if (pathname.startsWith("/courses")) return "수강정보";
   if (pathname.startsWith("/attendance")) return "출석";
+  if (pathname.startsWith("/my/password-change")) return "비밀번호 재설정";
+  if (pathname.startsWith("/my/interests")) return "관심사 관리";
   if (pathname.startsWith("/my")) return "마이페이지";
-  if (pathname.startsWith("/my/edit-profile")) return "내 정보 수정하기";
   return "";
 }
 
