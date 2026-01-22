@@ -218,11 +218,11 @@ export default function EditProfilePageClient() {
 
             <div className="mt-4 space-y-2">
               <div className="text-xs text-neutral-600">전화번호</div>
-              <div className="flex gap-2">
+              <div className="flex items-center gap-2">
                 <select
                   value={carrier}
                   onChange={(e) => setCarrier(e.target.value)}
-                  className="w-[90px] rounded-xl border border-neutral-200 bg-white px-3 py-3 text-sm"
+                  className="w-[90px] shrink-0 rounded-xl border border-neutral-200 bg-white px-3 py-3 text-sm"
                 >
                   <option>SKT</option>
                   <option>KT</option>
@@ -232,13 +232,13 @@ export default function EditProfilePageClient() {
                 <input
                   value={phone}
                   onChange={(e) => setPhone(formatPhone(e.target.value))}
-                  className="flex-1 rounded-xl border border-neutral-200 px-3 py-3 text-sm outline-none"
+                  className="min-w-0 flex-1 rounded-xl border border-neutral-200 px-3 py-3 text-sm outline-none"
                 />
 
                 <button
                   type="button"
                   onClick={startVerify}
-                  className="w-[76px] rounded-xl bg-[#1E2348] py-3 text-xs font-semibold text-white"
+                  className="w-[76px] min-w-0 rounded-xl whitespace-nowrap bg-[#1E2348] py-3 text-xs font-semibold text-white"
                 >
                   인증요청
                 </button>

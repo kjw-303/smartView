@@ -10,6 +10,9 @@ function getTitle(pathname: string) {
   if (pathname.startsWith("/attendance")) return "출석";
   if (pathname.startsWith("/my/password-change")) return "비밀번호 재설정";
   if (pathname.startsWith("/my/interests")) return "관심사 관리";
+  if (pathname.startsWith("/my/applications")) return "원서 관리";
+  if (pathname.startsWith("/my/classroom-status")) return "강의장 현황";
+  if (pathname.startsWith("/quickmenu/customize")) return "바로가기 편집";
   if (pathname.startsWith("/my")) return "마이페이지";
   return "";
 }

@@ -16,7 +16,7 @@ export default function SectionHeader({
         <button
           type="button"
           onClick={onAction}
-          className="text-xs text-neutral-50 underline-offset-2"
+          className="text-xs text-neutral-500 underline-offset-2"
         >
           {actionText}
         </button>

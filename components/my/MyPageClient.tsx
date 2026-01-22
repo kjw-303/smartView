@@ -24,7 +24,7 @@ export default function MyPageClient() {
           items={[
             { label: "비밀번호 변경", onClick: () => router.push("/my/password-change") },
             { label: "관심사 관리", onClick: () => router.push("/my/interests") },
-            { label: "내 원서 전체보기", onClick: () => alert("TODO") },
+            { label: "내 원서 전체보기", onClick: () => router.push("/my/applications") },
           ]}
         />
 
@@ -36,7 +36,7 @@ export default function MyPageClient() {
             { label: "1:1 학습문의 내역", onClick: () => router.push("/my/inquiries/learning") },
             { label: "세미나/특강 신청현황", onClick: () => router.push("/my/seminar-history") },
             { label: "원데이클래스 신청현황", onClick: () => alert("TODO") },
-            { label: "강의실 예약현황", onClick: () => alert("TODO") },
+            { label: "강의실 현황", onClick: () => router.push("/my/classroom-status") },
             { label: "스크랩 관리", onClick: () => alert("TODO") },
           ]}
         />

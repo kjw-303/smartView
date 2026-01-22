@@ -6,6 +6,7 @@ import PopularSlider from "./PopularSlider";
 import PostList, { PostItem } from "./PostList";
 import FilterSheet, { FilterState } from "./FilterSheet";
 import WriteFab from "./WriteFab";
+import ProfileEditSheet from "./ProfileEditSheet";
 
 const ALL_POSTS: PostItem[] = [
   {
@@ -64,6 +65,7 @@ export default function CommunityPageClient() {
   const [tab, setTab] = useState<CommunityTabKey>("talk");
   const [query, setQuery] = useState("");
   const [filterOpen, setFilterOpen] = useState(false);
+  const [profileEditOpen, setProfileEditOpen] = useState(false);
 
   const [filters, setFilters] = useState<FilterState>({
     sort: "latest",
@@ -91,7 +93,16 @@ export default function CommunityPageClient() {
   return (
     <div className="pt-4 overflow-hidden">
       <div className="px-5">
-        <h1 className="text-sm font-semibold text-neutral-900">커뮤니티</h1>
+        <div className="flex items-center justify-between">
+          <h1 className="text-sm font-semibold text-neutral-900">커뮤니티</h1>
+          <button
+            type="button"
+            onClick={() => setProfileEditOpen(true)}
+            className="text-xs text-neutral-500 underline-offset-2"
+          >
+            프로필 편집
+          </button>
+        </div>
       </div>
 
       <div className="mt-4 px-5">
@@ -138,6 +149,10 @@ export default function CommunityPageClient() {
           setFilters(v);
           setFilterOpen(false);
         }}
+      />
+      <ProfileEditSheet
+        open={profileEditOpen}
+        onClose={() => setProfileEditOpen(false)}
       />
       <WriteFab />
     </div>
